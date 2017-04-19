@@ -122,13 +122,13 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
   <dd>Defines the default size of an element. You can use any CSS unit of measurement -- percent, pixels, em, etc.</dd>
   
   <dt><code>flex</code></dt>
-  <dd>This is a shorthand property that combines <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. You have to include <code>flex-grow</code>, but the other two parameters are optional. Usually you'll include <code>flex-grow</code> and <code>flex-basis</code>, like this: <code>flex: 1 300px;</code>.</dd>
+  <dd>This is a shorthand property that combines <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. It's recommended to use <code>flex</code> instead of setting the other properties individually. You have to include <code>flex-grow</code>, but the other two parameters are optional. Usually you'll include <code>flex-grow</code> and <code>flex-basis</code>, like this: <code>flex: 1 300px;</code>.</dd>
   
   <dt><code>align-self</code></dt>
-  <dd></dd>
+  <dd>This allows the default alignment (as set by <code>align-items</code>) to be overridden for individual items.</dd>
 </dl>
 
-## Lab 1: ✨ [Flexbox Froggy](http://flexboxfroggy.com/)!
+## 🚀 Lab 1: [Flexbox Froggy](http://flexboxfroggy.com/)! 🐸
 
 For this lab, you'll be getting more acquainted with the flex properties, and applying them to flex items and flex containers. Hit the link above and start helping the frogs find their lilypads! (Feel free to work in pairs or groups!!)
 
