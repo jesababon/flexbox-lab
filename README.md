@@ -33,7 +33,13 @@
 - Elements with `display: flex;` have, largely, an external block context -- they exist in the document flow like any other kind of element.
 - Internally, they create a new type of context that has its own properties.
 
-### Flex containers vs flex items
+## Flex containers and flex items
+
+![Flex containers and flex items](./assets/flex-cont-item.jpg)
+
+#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
+
+### A flex container is 
 
 - Overview of the properties specific to each 
     - containers: display, flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content
