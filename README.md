@@ -41,6 +41,8 @@
 
 ### A flex _container_ is an element that creates a flex context.
 
+#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
+
 From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-containers): 
 
 > A flex container establishes a new flex formatting context for its contents. This is the same as establishing a block formatting context, except that flex layout is used instead of block layout. For example, floats do not intrude into the flex container ... Flex containers form a containing block for their contents exactly like block containers do.
@@ -52,6 +54,8 @@ The flex context works a little differently from the ordinary block context that
 - Some pseudoelements, like `::first-line` and `::first-letter`, don't apply to flex containers.
 
 ### A flex _item_ is an element that exists within a flex context.
+
+#### Keep following along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
 
 From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items): 
 
