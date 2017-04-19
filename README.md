@@ -106,21 +106,23 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
 
 ### 📚 Flex Item Properties
 
+([Taken largely from CSSTricks complete guide to flexbox.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
+
 <dl>
   <dt><code>order</code></dt>
-  <dd></dd>
+  <dd>The order in which you want flex items to appear along the main access. The default is 0. Negative numbers are allowed.</dd>
   
   <dt><code>flex-grow</code></dt>
-  <dd></dd>
+  <dd>Defines the proportion of the space in the container that the flex item will take up. For ex, if all flex items in a flex container have a <code>flex-grow</code> property of 1, they will all take up equal width. If one of the children has <code>flex-grow: 2;</code>, it will be twice as wide as the others.</dd>
   
   <dt><code>flex-shrink</code></dt>
-  <dd></dd>
+  <dd>Defines the ability for a flex item to shrink if necessary.</dd>
   
   <dt><code>flex-basis</code></dt>
-  <dd></dd>
+  <dd>Defines the default size of an element. You can use any CSS unit of measurement -- percent, pixels, em, etc.</dd>
   
   <dt><code>flex</code></dt>
-  <dd></dd>
+  <dd>This is a shorthand property that combines <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. You have to include <code>flex-grow</code>, but the other two parameters are optional. Usually you'll include <code>flex-grow</code> and <code>flex-basis</code>, like this: <code>flex: 1 300px;</code>.</dd>
   
   <dt><code>align-self</code></dt>
   <dd></dd>
