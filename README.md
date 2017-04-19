@@ -69,7 +69,7 @@ From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items):
 
 There's a long list of CSS properties that are specific to either flex containers or flex items. Let's go through them and talk about them!
 
-### Flex Container Properties
+### 📚 Flex Container Properties
 
 ([Taken largely from CSSTricks complete guide to flexbox.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
@@ -77,23 +77,23 @@ There's a long list of CSS properties that are specific to either flex container
   <dt><code>display</code></dt>
   <dd>In order to create a flex context, you must declare it using <code>display: flex;</code>. (Note: You may also occasionally see <code>display: inline-flex;</code> but I have not had to use this. If you want to know what it does, I encourage you to mess around.)</dd>
   
-  <dt>2. <code>flex-direction</code></dt>
-  <dd><code>flex-direction</code> establishes which axis is the main axis and which is the cross axis.</dd>
+  <dt><code>flex-direction</code></dt>
+  <dd><code>flex-direction</code> establishes which axis is the main axis and which is the cross axis. The possible values are <code>row</code>, <code>row-reverse</code>, <code>column</code>, and <code>column-reverse</code>. The behavior of other properties are dependent on <code>flex-direction</code>.</dd>
   
   <dt><code>flex-wrap</code></dt>
-  <dd></dd>
+  <dd>By default, flex items all try to fit into one line. <code>flex-wrap</code> changes this behavior, allowing items to wrap to new lines. The possible values are <code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code>.</dd>
   
   <dt><code>flex-flow</code></dt>
-  <dd></dd>
+  <dd>A shorthand property for <code>flex-direction</code> and <code>flex-wrap</code>. The default value is <code>row nowrap</code>. There's a bunch of different possible values -- essentially, pick one <code>flex-direction</code> value and one <code>flex-wrap</code> value and combine them.</dd>
   
   <dt><code>justify-content</code></dt>
-  <dd></dd>
+  <dd>Defines the alignment and spacing along the main axis, and helps distribute extra, leftover free space. The possible values are <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, and <code>space-around</code>. <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6' target='_blank'>See CSS Tricks article for reference</a>.</dd>
   
   <dt><code>align-items</code></dt>
-  <dd></dd>
+  <dd><code>align-items</code> describes how flex items are placed relative to the flex container. The possible values are <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code> (the default), and <code>baseline</code>.</dd>
   
   <dt><code>align-content</code></dt>
-  <dd></dd>
+  <dd>This aligns a flex container's lines when there's extra space on the cross axis. The available values are <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code> (the default), <code>space-between</code>, and <code>space-around</code>. <b>NOTE!</b> This property has no effect unless there's more than one line of flex items.  </dd>
 </dl>
 
 ### Main Axis, Cross Axis
@@ -102,9 +102,9 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
 
 ![Flex containers and flex items](./assets/flex-cont-item.jpg)
 
-#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/pPgZwb?editors=1100) ✨
+#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/MmKqxz?editors=1100) ✨
 
-### Flex Item Properties
+### 📚 Flex Item Properties
 
 <dl>
   <dt><code>order</code></dt>
