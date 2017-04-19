@@ -39,7 +39,35 @@
 
 #### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
 
-### A flex container is 
+### A flex _container_ is an element that creates a flex context.
+
+From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-containers): 
+
+> A flex container establishes a new flex formatting context for its contents. This is the same as establishing a block formatting context, except that flex layout is used instead of block layout. For example, floats do not intrude into the flex container ... Flex containers form a containing block for their contents exactly like block containers do.
+
+The flex context works a little differently from the ordinary block context that is the default of the document flow. A number of properties are different or do not apply.
+
+- `float` and `clear` don't have any effect on flex items
+- `vertical-align` has no effect on a flex item
+- Some pseudoelements, like `::first-line` and `::first-letter`, don't apply to flex containers.
+
+### A flex _item_ is an element that exists within a flex context.
+
+From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items): 
+
+> Each in-flow child of a flex container becomes a flex item, and each contiguous run of text that is directly contained inside a flex container is wrapped in an anonymous flex item. 
+
+### Nesting flex contexts within flex contexts (flexception??)...
+
+#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/pPgZwb?editors=1100) ✨
+
+From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items): 
+
+> A flex item establishes a new formatting context for its contents. The type of this formatting context is determined by its display value, as usual. However, flex items themselves are flex-level boxes, not block-level boxes: they participate in their container’s flex formatting context, not in a block formatting context.
+
+
+
+
 
 - Overview of the properties specific to each 
     - containers: display, flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content
