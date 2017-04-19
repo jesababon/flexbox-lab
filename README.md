@@ -67,7 +67,15 @@ From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items):
 
 ## Flex Properties and Axes (axises? axes?)
 
-There's a long list of CSS properties that are specific to either flex containers or flex items. Let's go through them and talk about them!
+There's a long list of CSS properties that are specific to either flex containers or flex items. We'll go through a few of them, and then you'll get practice with the rest during lab.
+
+#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/MmKqxz?editors=1100) ✨
+
+### Main Axis, Cross Axis
+
+A lot of the power in flexbox comes from the ability to switch which axis is which with just one property.
+
+![Flex containers and flex items](./assets/flex-cont-item.jpg)
 
 ### 📚 Flex Container Properties
 
@@ -95,14 +103,6 @@ There's a long list of CSS properties that are specific to either flex container
   <dt><code>align-content</code></dt>
   <dd>This aligns a flex container's lines when there's extra space on the cross axis. The available values are <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code> (the default), <code>space-between</code>, and <code>space-around</code>. <b>NOTE!</b> This property has no effect unless there's more than one line of flex items.  </dd>
 </dl>
-
-### Main Axis, Cross Axis
-
-A lot of the power in flexbox comes from the ability to switch which axis is which with just one property.
-
-![Flex containers and flex items](./assets/flex-cont-item.jpg)
-
-#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/MmKqxz?editors=1100) ✨
 
 ### 📚 Flex Item Properties
 
