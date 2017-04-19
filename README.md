@@ -35,10 +35,6 @@
 
 ## Flex containers and flex items
 
-![Flex containers and flex items](./assets/flex-cont-item.jpg)
-
-#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
-
 ### A flex _container_ is an element that creates a flex context.
 
 #### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/rmxKgL?editors=1100) ✨
@@ -63,7 +59,7 @@ From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items):
 
 ### Nesting flex contexts within flex contexts (flexception....?? )
 
-#### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/pPgZwb?editors=1100) ✨
+#### Follow along in ✨ [this new codepen!](https://codepen.io/jlr7245/pen/pPgZwb?editors=1100) ✨
 
 From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items): 
 
@@ -79,24 +75,24 @@ There's a long list of CSS properties that are specific to either flex container
 
 <dl>
   <dt>1. <code>display</code></dt>
-  <dd>In order to create a flex context, you must declare it using `display: flex;`. (Note: You may also occasionally see `display: inline-flex;` but I have not had to use this. If you want to know what it does, I encourage you to mess around.)</dd>
+  <dd>In order to create a flex context, you must declare it using <code>display: flex;</code>. (Note: You may also occasionally see <code>display: inline-flex;</code> but I have not had to use this. If you want to know what it does, I encourage you to mess around.)</dd>
   
-  <dt>2. `flex-direction`</dt>
-  <dd>`flex-direction` establishes which axis is the main axis and which is the cross axis.</dd>
+  <dt>2. <code>flex-direction</code></dt>
+  <dd><code>flex-direction</code> establishes which axis is the main axis and which is the cross axis.</dd>
   
-  <dt>3. `flex-wrap`</dt>
+  <dt>3. <code>flex-wrap</code></dt>
   <dd></dd>
   
-  <dt>4. `flex-flow`</dt>
+  <dt>4. <code>flex-flow</code></dt>
   <dd></dd>
   
-  <dt>5. `justify-content`</dt>
+  <dt>5. <code>justify-content</code></dt>
   <dd></dd>
   
-  <dt>6. `align-items`</dt>
+  <dt>6. <code>align-items</code></dt>
   <dd></dd>
   
-  <dt>7. `align-content`</dt>
+  <dt>7. <code>align-content</code></dt>
   <dd></dd>
 </dl>
 
@@ -104,18 +100,35 @@ There's a long list of CSS properties that are specific to either flex container
 
 A lot of the power in flexbox comes from the ability to switch which axis is which with just one property.
 
+![Flex containers and flex items](./assets/flex-cont-item.jpg)
+
 #### Follow along in ✨ [this codepen!](https://codepen.io/jlr7245/pen/pPgZwb?editors=1100) ✨
 
+### Flex Item Properties
 
+<dl>
+  <dt>1. <code>order</code></dt>
+  <dd></dd>
+  
+  <dt>2. <code>flex-grow</code></dt>
+  <dd></dd>
+  
+  <dt>3. <code>flex-shrink</code></dt>
+  <dd></dd>
+  
+  <dt>4. <code>flex-basis</code></dt>
+  <dd></dd>
+  
+  <dt>5. <code>flex</code></dt>
+  <dd></dd>
+  
+  <dt>6. <code>align-self</code></dt>
+  <dd></dd>
+</dl>
 
-- Overview of the properties specific to each 
-    - containers: display, flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content
-    - items: order, flex-grow, flex-shrink, flex-basis, flex, align-self
-- Overview of what the cross axis and the main axis are and how they change with flex-direction
-- [graphic](https://github.com/ga-wdi-lessons/css-flexbox/raw/master/img/flexbox-diagram.jpg)
-- [other repo flexbox notes](https://github.com/ga-wdi-lessons/css-flexbox)
+## Lab 1: ✨ [Flexbox Froggy](http://flexboxfroggy.com/)!
 
-## Lab 1: Flexbox Froggy!
+For this lab, you'll be getting more acquainted with the flex properties, and applying them to flex items and flex containers. Hit the link above and start helping the frogs find their lilypads! (Feel free to work in pairs or groups!!)
 
 # Why use flexbox?
 
