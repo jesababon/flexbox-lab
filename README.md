@@ -74,25 +74,25 @@ There's a long list of CSS properties that are specific to either flex container
 ([Taken largely from CSSTricks complete guide to flexbox.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
 <dl>
-  <dt>1. <code>display</code></dt>
+  <dt><code>display</code></dt>
   <dd>In order to create a flex context, you must declare it using <code>display: flex;</code>. (Note: You may also occasionally see <code>display: inline-flex;</code> but I have not had to use this. If you want to know what it does, I encourage you to mess around.)</dd>
   
   <dt>2. <code>flex-direction</code></dt>
   <dd><code>flex-direction</code> establishes which axis is the main axis and which is the cross axis.</dd>
   
-  <dt>3. <code>flex-wrap</code></dt>
+  <dt><code>flex-wrap</code></dt>
   <dd></dd>
   
-  <dt>4. <code>flex-flow</code></dt>
+  <dt><code>flex-flow</code></dt>
   <dd></dd>
   
-  <dt>5. <code>justify-content</code></dt>
+  <dt><code>justify-content</code></dt>
   <dd></dd>
   
-  <dt>6. <code>align-items</code></dt>
+  <dt><code>align-items</code></dt>
   <dd></dd>
   
-  <dt>7. <code>align-content</code></dt>
+  <dt><code>align-content</code></dt>
   <dd></dd>
 </dl>
 
@@ -107,22 +107,22 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
 ### Flex Item Properties
 
 <dl>
-  <dt>1. <code>order</code></dt>
+  <dt><code>order</code></dt>
   <dd></dd>
   
-  <dt>2. <code>flex-grow</code></dt>
+  <dt><code>flex-grow</code></dt>
   <dd></dd>
   
-  <dt>3. <code>flex-shrink</code></dt>
+  <dt><code>flex-shrink</code></dt>
   <dd></dd>
   
-  <dt>4. <code>flex-basis</code></dt>
+  <dt><code>flex-basis</code></dt>
   <dd></dd>
   
-  <dt>5. <code>flex</code></dt>
+  <dt><code>flex</code></dt>
   <dd></dd>
   
-  <dt>6. <code>align-self</code></dt>
+  <dt><code>align-self</code></dt>
   <dd></dd>
 </dl>
 
