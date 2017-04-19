@@ -78,7 +78,7 @@ There's a long list of CSS properties that are specific to either flex container
 ([Taken largely from CSSTricks complete guide to flexbox.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
 <dl>
-  <dt>1. `display`</dt>
+  <dt>1. <code>display</code></dt>
   <dd>In order to create a flex context, you must declare it using `display: flex;`. (Note: You may also occasionally see `display: inline-flex;` but I have not had to use this. If you want to know what it does, I encourage you to mess around.)</dd>
   
   <dt>2. `flex-direction`</dt>
