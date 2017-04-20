@@ -151,13 +151,15 @@ To put this image into words, the Holy Grail layout:
 2. Allows the center column to appear first in the HTML;
 3. Allows any column to have the most content;
 4. Has fixed-height header and footer that span the width of the page;
-5. Has a footer that sticks to the bottom of the page no matter the height of the content;
+5. Has a footer that sticks to the bottom of the browser window no matter the height of the content without using absolute or fixed positioning;
 6. Requires only one extra element; and
 7. Uses as little CSS as possible.
 
+(This is based on the description of the Holy Grail problem from [A List Apart](https://alistapart.com/article/holygrail).)
+
 We're going to be working from this HTML:
 
-```HTML
+```html
 <body>
   <header>Header</header>
   <main>
@@ -172,7 +174,7 @@ We're going to be working from this HTML:
 <details>
 <summary>Here's the CSS solution. Don't peek!!! We'll walk through it together. But I wanted you to have it in case you want to come back to it later.</summary>
 
-```CSS
+```css
 body {
   display: flex;
   flex-direction: column;
@@ -221,6 +223,30 @@ aside {
 ```
 </details>
 
+#### But J! How would you do this without flexbox!
+
+I thought about walking through the flexboxless solution for the Holy Grail layout. But the fix without flexbox is so genuinely awful and contains so many practices that I'd like to avoid that it's really not worth even presenting. 
+
+And there's one element of the problem the way I've presented it -- "5. Has a footer that sticks to the bottom of the browser window no matter the height of the content without using absolute or fixed positioning" -- that might actually be impossible without flexbox.
+
+If you're interested in the equal-height-columns problem, which is a classic CSS problem that I've had to use JavaScript to solve in the past (not ideal!), check out [this extremely ancient article](http://www.positioniseverything.net/articles/onetruelayout/equalheight) from 2005.
+
+And here's a quick snippet of part of the flexboxless solution for Holy Grail:
+
+```css
+main {
+  overflow: hidden;
+}
+main aside, main article {
+  padding-bottom: 20010px;  
+  margin-bottom: -20000px;  
+}
+footer {
+  position: relative;
+}
+```
+
+Yikes!!!!!!
 
 ## 🚀 Lab 2: Practice practice practice!
 
