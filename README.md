@@ -134,14 +134,96 @@ For this lab, you'll be getting more acquainted with the flex properties, and ap
 
 # Why use flexbox?
 
-### Holy Grail layout
+As you may have noticed, ***flexbox is literally magic***. Problems that take hours of messing with floats, positions, and so on, are solved in minutes. And responsiveness is a dream -- just change the `flex-direction` for mobile and you're all set.
 
-- We do holy grail layout together in class
+There are a number of classic web design problems that once took odd CSS hacks and patches to fix. Let's walk through one of them together.
+
+### 🏆 The Holy Grail
+
+You've seen the Holy Grail layout about a billion times. It looks like this:
+
+![holy grail](./assets/holy-grail.png)
+
+To put this image into words, the Holy Grail layout:
+
+1. Has a fluid center (i.e. the center column changes width as the browser window changes width) and fixed-width sidebars, all of which are the same height;
+2. Allows the center column to appear first in the HTML;
+3. Allows any column to have the most content;
+4. Has fixed-height header and footer that span the width of the page;
+5. Has a footer that sticks to the bottom of the page no matter the height of the content;
+6. Requires only one extra element; and
+7. Uses as little CSS as possible.
+
+We're going to be working from this HTML:
+
+```HTML
+<body>
+  <header>Header</header>
+  <main>
+    <article>Content</article>
+    <aside class='left'>Left sidebar</aside>
+    <aside class='right'>Right sidebar</aside>
+  </main>
+  <footer>Footer</footer>
+</body>
+```
+
+<details>
+<summary>Here's the CSS solution. Don't peek!!! We'll walk through it together. But I wanted you to have it in case you want to come back to it later.</summary>
+
+```CSS
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  flex: 0 150px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+}
+
+article {
+  order: 2;
+  flex: 3;
+}
+
+aside {
+  flex: 0 300px;
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  order: 3;
+}
+
+@media screen and (max-width: 1025px) {
+  main {
+    flex-direction: column;
+  }
+
+  article {
+    order: 0;
+  }
+
+  aside {
+    flex: 0;
+  }
+}
+```
+</details>
 
 ### Other applications
 
 - Walk through healthify CSS?
 
-## Lab 2: 
+## 🚀 Lab 2: 
 
 I still need to come up with this one but it will be a problem similar to holy grail. [here's a possible lab repo](https://github.com/ga-wdi-exercises/css-airbnb)
