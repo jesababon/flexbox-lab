@@ -19,7 +19,7 @@ We've been doing this a little bit already! We've been using media queries to ch
 
 ### What is a screen? What is a webpage?
 
-Designing for screens ins inherently different from designing for print, because of a concept that Frank Chimero (another super cool guy) calls "flux". Flux just refers for the ability for mutability -- the ability to change. By and large, print design doesn't have this, while it's natural and essential for the concept of the screen.
+Designing for screen is inherently different from designing for print, because of a concept that Frank Chimero (another super cool guy) calls "flux". Flux just refers for the ability for mutability -- the ability to change. By and large, print design doesn't have this, while it's natural and essential for the concept of the screen.
 
 Originally web designers used to design for web the way they designed for print, which is why tables were such a big deal in the '90s and early '00s. And when screens were all more or less the same size, that was fine. But as soon as people started looking at the web on screens different sizes, things started breaking. It became clear that the way one thinks about designing for screen needed to change.
 
