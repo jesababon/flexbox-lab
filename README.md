@@ -6,6 +6,7 @@
 - Define the flexible box module (flexbox!)
 - Give an example of a problem solved by flexbox
 - Contrast flex containers and flex items
+- Describe the difference between the main axis and the cross axis
 - Use flexbox to solve common design problems without using hacks
 
 # What is responsive design?
@@ -220,10 +221,28 @@ aside {
 ```
 </details>
 
-### Other applications
 
-- Walk through healthify CSS?
+## 🚀 Lab 2: Practice practice practice!
 
-## 🚀 Lab 2: 
+In the `flexbox-lab` directory of this repo, you'll find an `index.html` and a `style.css`. Using flexbox properties, get the `index.html` to look like this image:
 
-I still need to come up with this one but it will be a problem similar to holy grail. [here's a possible lab repo](https://github.com/ga-wdi-exercises/css-airbnb)
+
+There's a little bit of starter CSS provided.
+
+Here's the lab solutions for each step. **ONLY LOOK AT THESE IF YOU ARE WELL AND TRULY STUCK!!!**
+
+<details>
+  <summary>Body</summary>
+</details>
+
+<details>
+  <summary>Header, nav, and footer</summary>
+</details>
+
+<details>
+  <summary>Main and aside</summary>
+</details>
+
+<details>
+  <summary>Feature</summary>
+</details>
