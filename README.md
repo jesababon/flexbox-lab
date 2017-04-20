@@ -224,8 +224,9 @@ aside {
 
 ## 🚀 Lab 2: Practice practice practice!
 
-In the `flexbox-lab` directory of this repo, you'll find an `index.html` and a `style.css`. Using flexbox properties, get the `index.html` to look like this image:
+In the `flexbox-lab` directory of this repo, you'll find an `index.html` and a `style.css`. Using flexbox properties, get the `index.html` to look like this image, both on mobile widths and desktop widths:
 
+![mockup](./assets/mockup.jpg)
 
 There's a little bit of starter CSS provided.
 
@@ -233,16 +234,91 @@ Here's the lab solutions for each step. **ONLY LOOK AT THESE IF YOU ARE WELL AND
 
 <details>
   <summary>Body</summary>
+
+  ```css
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+  ```
+
 </details>
 
 <details>
-  <summary>Header, nav, and footer</summary>
+  <summary>Header and nav</summary>
+
+  ```css
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        flex: 0 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1025px) {
+        header {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            display: flex;
+        }
+    }
+  ```
+
 </details>
 
 <details>
-  <summary>Main and aside</summary>
+  <summary>Main, aside, content section, article</summary>
+
+  ```css
+    main, article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 2;
+    }
+
+    @media screen and (min-width: 1025px) {
+
+        main {
+            flex-direction: row;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        article {
+            flex: 3;
+        }
+    }
+  ```
+
 </details>
 
 <details>
   <summary>Feature</summary>
+
+  ```css
+    .feature {
+        flex: 1;
+        display: flex;
+    }
+
+    .col {
+        flex: 1;
+    }
+  ```
+
 </details>
