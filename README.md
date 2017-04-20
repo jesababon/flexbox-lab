@@ -11,21 +11,79 @@
 
 # What is responsive design?
 
-- Talk a little bit about the frank chimero article
-    - The concept of "flux" -- a website's presentation necessarily changes based on what it's viewed on. _this is a feature, not a bug._ it allows us to predict the user's priorities and meet them.
-    - a screen isn't just what shows up in the browser window. it's an endless surface extending infinitely in all directions. (bring up some of the game projects that had infinite scrolling)
-    - "an edgeless surface of unknown proportions comprised of small, individual, and variable elements from multiple vantages assembled into a readable whole that documents a moment."
-    - The job of a designer or developer is to structure a page so that at any given moment, no matter the size of the screen or the device of the user, the user is seeing precisely the information they need most.
-    - A handy way to think about this is to consider media queries not in terms of "breakpoints" but in terms of "points of reassembly" -- go back to the definition above.
-- The difference between responsive and adaptive design
-    - adaptive design is just adapting an existing design to a different screen size. responsive design is anticipating the user's needs and creating a design that meets them no matter how the design is viewed.
-- Walk through a couple of the [responsive design patterns](https://bradfrost.github.io/this-is-responsive/patterns.html)
+The term "responsive web design" was coined by Ethan Marcotte (a super cool guy all around) back in 2010. It immediately caught on, and it's been around ever since.
 
-### Break
+> Responsive web design is the approach that suggests that design and development should respond to the user’s behavior and environment based on screen size, platform and orientation. (From [Smashing Magazine](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/))
+
+We've been doing this a little bit already! We've been using media queries to change how pages look between desktop and mobile. And by and large, this is what interviewers and job postings mean when they say "responsive design". But we're going to go a little bit deeper into the rabbit hole...
+
+### What is a screen? What is a webpage?
+
+Designing for screens ins inherently different from designing for print, because of a concept that Frank Chimero (another super cool guy) calls "flux". Flux just refers for the ability for mutability -- the ability to change. By and large, print design doesn't have this, while it's natural and essential for the concept of the screen.
+
+Originally web designers used to design for web the way they designed for print, which is why tables were such a big deal in the '90s and early '00s. And when screens were all more or less the same size, that was fine. But as soon as people started looking at the web on screens different sizes, things started breaking. It became clear that the way one thinks about designing for screen needed to change.
+
+A webpage has no fixed dimensions. It extends potentially infinitely in every direction. Consider this definition of a webpage:
+
+> An edgeless surface of unknown proportions comprised of small, individual, and variable elements from multiple vantages assembled into a readable whole. (from [The Web's Grain](https://www.frankchimero.com/writing/the-webs-grain/) by Frank Chimero)
+
+Here's a visual to help us understand that concept a little more:
+
+![moment](./assets/moment.jpg)
+
+### Breakpoints or points of reassembly?? 🤔
+
+Consider the common media query:
+
+```css
+@media screen and (min-width: 1025px) {
+  /* stuff goes here */
+}
+```
+
+Cool. So that's a media query for desktop view, for when the screen is larger than 1025px. We've put it there because our mobile design starts looking weird at that size.
+
+So far, we've been calling these breakpoints. And you should be calling them breakpoints, because that's the industry standard term. But I find it more useful to think about these as "points of reassembly". 
+
+Consider the definition of a page again:
+
+> An edgeless surface of unknown proportions comprised of small, individual, and variable elements from multiple vantages assembled into a readable whole. (from [The Web's Grain](https://www.frankchimero.com/writing/the-webs-grain/) by Frank Chimero)
+
+When we switch the screen from a desktop view from a mobile view, the elements aren't _breaking_. They're divs and spans and so on. They're immaterial. They can't break. They're _reassembling_.
+
+The point of responsive design is to manage that reassembly in a way that benefits the user.
+
+#### Adaptive design is _how_ you would change a page. Responsive design deals much more with _why_.
+
+Nobody goes to a website to _use the website_. They go to the website to get information, perform a task, play a game, etc. (Remember writing user stories?) The easier we make that task for the user, the more likely the user is to stay on the page. 
+
+#### The job of a designer or developer is to structure a page so that at any given moment, no matter the size of the screen or the device of the user, the user is seeing precisely the information they need most.
+
+### But J! Why are we talking about design?!? This is a development course!
+
+You are all designers.
+
+Let's say that again:
+
+#### _You are all designers._
+
+Every one of you has designed an amazing game. But that's just scratching the surface of what design is, and what makes all of you designers. 
+
+#### Design is approaching a problem with a creative lens in order to find a beautiful solution.
+
+The concept of design -- and of designing responsively -- isn't just exclusive to considerations of visual design. It's about how you approach a problem: considering the _how_ of solving the problem as well as the _why_ of your approach. Thinking about your JavaScript in this way will help make you a better programmer, which is the real takeaway of this delve into responsive design.
+
+### Common responsive design patterns
+
+There are a number of common responsive web design problems. Frank Chimero goes over one in his article -- a picture and text next to each other with a changing screen size. We'll walk through a solution to that problem at the end of the lecture. In the meantime, [here's a link](https://bradfrost.github.io/this-is-responsive/patterns.html) to a site with a number of other common problems and solutions -- I recommend taking a look through it.
 
 # Intro to flexbox!
 
-- Talk a little bit about the history of flexbox, why it exists, etc
+#### What is flexbox?
+
+Flexbox is short for "The CSS3 Flexible Box Module". From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), here's a definiton:
+
+> Flexbox ... is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices. ... The defining aspect of the flex layout is the ability to alter its items' width and/or height to best fit in the available space on any display device.
 
 ### Flex context vs block context
 
@@ -135,9 +193,9 @@ For this lab, you'll be getting more acquainted with the flex properties, and ap
 
 # Why use flexbox?
 
-As you may have noticed, ***flexbox is literally magic***. Problems that take hours of messing with floats, positions, and so on, are solved in minutes. And responsiveness is a dream -- just change the `flex-direction` for mobile and you're all set.
+As you may have noticed, ***flexbox is literally magic***. Problems that take hours of messing with floats, positions, and so on, are solved in minutes. And responsiveness is a dream -- just change the `flex-direction` between mobile and desktop and you're all set.
 
-There are a number of classic web design problems that once took odd CSS hacks and patches to fix. Let's walk through one of them together.
+There are a number of classic web design problems that once took odd CSS hacks and patches to fix, but are now a breeze with flexbox. Let's walk through one of them together.
 
 ### 🏆 The Holy Grail
 
@@ -151,7 +209,7 @@ To put this image into words, the Holy Grail layout:
 2. Allows the center column to appear first in the HTML;
 3. Allows any column to have the most content;
 4. Has fixed-height header and footer that span the width of the page;
-5. Has a footer that sticks to the bottom of the browser window no matter the height of the content without using absolute or fixed positioning;
+5. Has a footer that reaches at least the bottom of the browser window no matter the height of the content without using absolute or fixed positioning;
 6. Requires only one extra element; and
 7. Uses as little CSS as possible.
 
@@ -227,7 +285,7 @@ aside {
 
 I thought about walking through the flexboxless solution for the Holy Grail layout. But the fix without flexbox is so genuinely awful and contains so many practices that I'd like to avoid that it's really not worth even presenting. 
 
-And there's one element of the problem the way I've presented it -- "5. Has a footer that sticks to the bottom of the browser window no matter the height of the content without using absolute or fixed positioning" -- that might actually be impossible without flexbox.
+And there's one element of the problem the way I've presented it -- "5. Has a footer that reaches at least the bottom of the browser window no matter the height of the content without using absolute or fixed positioning" -- that might actually be impossible without flexbox.
 
 If you're interested in the equal-height-columns problem, which is a classic CSS problem that I've had to use JavaScript to solve in the past (not ideal!), check out [this extremely ancient article](http://www.positioniseverything.net/articles/onetruelayout/equalheight) from 2005.
 
