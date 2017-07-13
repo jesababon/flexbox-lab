@@ -19,7 +19,7 @@ competencies: CSS
 - Describe the difference between the main axis and the cross axis
 - Use flexbox to solve common design problems without using hacks
 
-# What is responsive design? (5min)
+# What is responsive design? (35min)
 
 The term "responsive web design" was coined by Ethan Marcotte (a super cool guy all around) back in 2010. It immediately caught on, and it's been around ever since.
 
@@ -29,7 +29,7 @@ We've been doing this a little bit already! We've been using media queries to ch
 
 > Discuss the difference between responsive & adaptive design
 
-### What is a screen? What is a webpage? (7min)
+### What is a screen? What is a webpage?
 
 Designing for screen is inherently different from designing for print, because of a concept that Frank Chimero (another super cool guy) calls "flux". Flux just refers for the ability for mutability -- the ability to change. By and large, print design doesn't have this, while it's natural and essential for the concept of the screen.
 
@@ -49,7 +49,7 @@ Here's a visual to help us understand that concept a little more:
 
 > Mona Lisa is like when you design for print, whereas the other artwork is much more like designing for web. You can imagine that if the elements in the other artwork were rearranged, the artwork itself would still be a readable whole.
 
-### Breakpoints or points of reassembly?? 🤔 (5min)
+### Breakpoints or points of reassembly?? 🤔
 
 Consider the common media query:
 
@@ -77,7 +77,7 @@ Nobody goes to a website to _use the website_. They go to the website to get inf
 
 #### The job of a designer or developer is to structure a page so that at any given moment, no matter the size of the screen or the device of the user, the user is seeing precisely the information they need most.
 
-### Why are we talking about design?!? This is a development course! (5min)
+### Why are we talking about design?!? This is a development course!
 
 You are all designers.
 
@@ -93,15 +93,15 @@ The concept of design -- and of designing responsively -- isn't just exclusive t
 
 > What have you designed recently?
 
-### Common responsive design patterns (5min)
+### Common responsive design patterns
 
 There are a number of common responsive web design problems. Frank Chimero goes over one in his article -- a picture and text next to each other with a changing screen size. We'll walk through a solution to that problem at the end of the lecture. In the meantime, [here's a link](https://bradfrost.github.io/this-is-responsive/patterns.html) to a site with a number of other common problems and solutions -- I recommend taking a look through it.
 
 ### Break (10min)
 
-# Intro to flexbox!
+# Intro to flexbox! (30min)
 
-#### What is flexbox? (2min)
+### What is flexbox? (2min)
 
 Flexbox is short for "The CSS3 Flexible Box Module". From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), here's a definiton:
 
@@ -213,13 +213,13 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
 
 For this lab, you'll be getting more acquainted with the flex properties, and applying them to flex items and flex containers. Hit the link above and start helping the frogs find their lilypads! (Feel free to work in pairs or groups!!)
 
-# Why use flexbox? (2min)
+# Why use flexbox? (20min)
 
 As you may have noticed, ***flexbox is literally magic***. Problems that take hours of messing with floats, positions, and so on, are solved in minutes. And responsiveness is a dream -- just change the `flex-direction` between mobile and desktop and you're all set.
 
 There are a number of classic web design problems that once took odd CSS hacks and patches to fix, but are now a breeze with flexbox. Let's walk through one of them together.
 
-### 🏆 The Holy Grail (15min)
+### 🏆 The Holy Grail
 
 You've seen the Holy Grail layout about a billion times. It looks like this:
 
@@ -328,7 +328,7 @@ footer {
 
 Yikes!!!!!!
 
-## 🚀 Lab 2: Practice practice practice! (45min)
+## 🚀 Lab 2: Practice practice practice! (30min)
 
 In the `flexbox-lab` directory of this repo, you'll find an `index.html` and a `style.css`. Using flexbox properties, get the `index.html` to look like this image, both on mobile widths and desktop widths:
 
