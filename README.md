@@ -1,3 +1,13 @@
+---
+title: Responsive Design & Flexbox
+type: lesson
+duration: "2:30"
+creator:
+    name: J Silverstein
+    city: NYC
+competencies: CSS
+---
+
 # Responsive Design & Flexbox!!
 
 ### Learning Objectives
@@ -9,7 +19,7 @@
 - Describe the difference between the main axis and the cross axis
 - Use flexbox to solve common design problems without using hacks
 
-# What is responsive design?
+# What is responsive design? (35min)
 
 The term "responsive web design" was coined by Ethan Marcotte (a super cool guy all around) back in 2010. It immediately caught on, and it's been around ever since.
 
@@ -17,11 +27,17 @@ The term "responsive web design" was coined by Ethan Marcotte (a super cool guy 
 
 We've been doing this a little bit already! We've been using media queries to change how pages look between desktop and mobile. And by and large, this is what interviewers and job postings mean when they say "responsive design". But we're going to go a little bit deeper into the rabbit hole...
 
+> Discuss the difference between responsive & adaptive design
+
 ### What is a screen? What is a webpage?
 
 Designing for screen is inherently different from designing for print, because of a concept that Frank Chimero (another super cool guy) calls "flux". Flux just refers for the ability for mutability -- the ability to change. By and large, print design doesn't have this, while it's natural and essential for the concept of the screen.
 
+> Example of flux: sortable spreadsheets etc
+
 Originally web designers used to design for web the way they designed for print, which is why tables were such a big deal in the '90s and early '00s. And when screens were all more or less the same size, that was fine. But as soon as people started looking at the web on screens different sizes, things started breaking. It became clear that the way one thinks about designing for screen needed to change.
+
+> What shape is a screen? It's not really a shape.
 
 A webpage has no fixed dimensions. It extends potentially infinitely in every direction. Consider this definition of a webpage:
 
@@ -30,6 +46,8 @@ A webpage has no fixed dimensions. It extends potentially infinitely in every di
 Here's a visual to help us understand that concept a little more:
 
 ![moment](./assets/moment.jpg)
+
+> Mona Lisa is like when you design for print, whereas the other artwork is much more like designing for web. You can imagine that if the elements in the other artwork were rearranged, the artwork itself would still be a readable whole.
 
 ### Breakpoints or points of reassembly?? 🤔
 
@@ -59,7 +77,7 @@ Nobody goes to a website to _use the website_. They go to the website to get inf
 
 #### The job of a designer or developer is to structure a page so that at any given moment, no matter the size of the screen or the device of the user, the user is seeing precisely the information they need most.
 
-### But J! Why are we talking about design?!? This is a development course!
+### Why are we talking about design?!? This is a development course!
 
 You are all designers.
 
@@ -73,26 +91,30 @@ Every one of you has designed an amazing game. But that's just scratching the su
 
 The concept of design -- and of designing responsively -- isn't just exclusive to considerations of visual design. It's about how you approach a problem: considering the _how_ of solving the problem as well as the _why_ of your approach. Thinking about your JavaScript in this way will help make you a better programmer, which is the real takeaway of this delve into responsive design.
 
+> What have you designed recently?
+
 ### Common responsive design patterns
 
 There are a number of common responsive web design problems. Frank Chimero goes over one in his article -- a picture and text next to each other with a changing screen size. We'll walk through a solution to that problem at the end of the lecture. In the meantime, [here's a link](https://bradfrost.github.io/this-is-responsive/patterns.html) to a site with a number of other common problems and solutions -- I recommend taking a look through it.
 
-# Intro to flexbox!
+### Break (10min)
 
-#### What is flexbox?
+# Intro to flexbox! (30min)
+
+### What is flexbox? (2min)
 
 Flexbox is short for "The CSS3 Flexible Box Module". From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), here's a definiton:
 
 > Flexbox ... is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices. ... The defining aspect of the flex layout is the ability to alter its items' width and/or height to best fit in the available space on any display device.
 
-### Flex context vs block context
+### Flex context vs block context (3min)
 
 - Up to this point we've been working with the block context -- `display: block;`. This means that in order to position things, we needed to float them, use clearfix, etc.
 - Flexbox introduces a new context: `display: flex;`.
 - Elements with `display: flex;` have, largely, an external block context -- they exist in the document flow like any other kind of element.
 - Internally, they create a new type of context that has its own properties.
 
-## Flex containers and flex items
+## Flex containers and flex items (15min)
 
 ### A flex _container_ is an element that creates a flex context.
 
@@ -124,7 +146,7 @@ From the [W3 Specification](https://www.w3.org/TR/css-flexbox-1/#flex-items):
 
 > A flex item establishes a new formatting context for its contents. The type of this formatting context is determined by its display value, as usual. However, flex items themselves are flex-level boxes, not block-level boxes: they participate in their container’s flex formatting context, not in a block formatting context.
 
-## Flex Properties and Axes (axises? axes?)
+## Flex Properties and Axes (axises? axes?) (10min)
 
 There's a long list of CSS properties that are specific to either flex containers or flex items. We'll go through a few of them, and then you'll get practice with the rest during lab.
 
@@ -187,11 +209,11 @@ A lot of the power in flexbox comes from the ability to switch which axis is whi
   <dd>This allows the default alignment (as set by <code>align-items</code>) to be overridden for individual items.</dd>
 </dl>
 
-## 🚀 Lab 1: [Flexbox Froggy](http://flexboxfroggy.com/)! 🐸
+## 🚀 Lab 1: [Flexbox Froggy](http://flexboxfroggy.com/)! 🐸 (30min)
 
 For this lab, you'll be getting more acquainted with the flex properties, and applying them to flex items and flex containers. Hit the link above and start helping the frogs find their lilypads! (Feel free to work in pairs or groups!!)
 
-# Why use flexbox?
+# Why use flexbox? (20min)
 
 As you may have noticed, ***flexbox is literally magic***. Problems that take hours of messing with floats, positions, and so on, are solved in minutes. And responsiveness is a dream -- just change the `flex-direction` between mobile and desktop and you're all set.
 
@@ -306,7 +328,7 @@ footer {
 
 Yikes!!!!!!
 
-## 🚀 Lab 2: Practice practice practice!
+## 🚀 Lab 2: Practice practice practice! (30min)
 
 In the `flexbox-lab` directory of this repo, you'll find an `index.html` and a `style.css`. Using flexbox properties, get the `index.html` to look like this image, both on mobile widths and desktop widths:
 
