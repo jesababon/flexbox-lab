@@ -1,0 +1,48 @@
+header{
+    background-color: red;
+    margin-bottom: 15px;
+    height: 100px;
+
+}
+
+#right{
+    background-color: lavender;
+    width: 18%;
+
+
+
+
+}
+
+#left{
+    background-color: lavender;
+    width: 18%;
+
+
+
+
+}
+
+#center{
+    background-color: lavender;
+    width: 60%;
+    margin: 0 15px;
+    
+
+
+}
+
+main{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+}
+
+footer{
+    background-color: lavender;
+    height: 100px;
+    margin-top: 15px;
+
+
+
+}

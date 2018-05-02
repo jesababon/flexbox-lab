@@ -1,0 +1,38 @@
+header {
+  background-color: red;
+  margin-bottom: 15px;
+  height: 100px;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.half {
+  background-color: pink;
+  width: 48%;
+  margin: 10px;
+  flex-flow: row wrap;
+
+
+}
+
+.third {
+  background-color: blue;
+  width: 32%;
+  margin: 10px;
+  /* flex-direction: row; */
+  flex-flow: row wrap;
+
+
+
+}
+
+footer {
+  background-color: lavender;
+  height: 100px;
+  margin-top: 15px;
+}
